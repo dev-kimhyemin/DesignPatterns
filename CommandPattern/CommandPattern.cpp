@@ -1,17 +1,37 @@
 
 #include <iostream>
-
+#include <string>
 #include "EnhancedClass.h"
+
+static bool GetTypeIfPossible(const std::string& typeString, ParameterType& type)
+{
+    int typeInt;
+    
+    try
+    {
+        typeInt = std::stoi(typeString);
+    }
+    catch (...)
+    {
+        return false;
+    }
+
+    if(typeInt < 0 || typeInt > 2)
+    {
+        return false;
+    }
+
+    type = static_cast<ParameterType>(typeInt);
+    return true;
+}
 
 static void GetInput(EnhancedClass* targetClass)
 {
     ParameterType type = Function;
     std::string typeString;
-    int typeInt;
-    std::string name;
-    
+
     std::cout << "Input type(0 ~ 2) or undo(z): ";
-    std::cin >> typeString;
+    std::getline(std::cin, typeString);
 
     if(typeString == "z")
     {
@@ -19,26 +39,14 @@ static void GetInput(EnhancedClass* targetClass)
         return;
     }
 
-    try
+    if(GetTypeIfPossible(typeString, type))
     {
-        typeInt = std::stoi(typeString);
-    }
-    catch (...)
-    {
-        return;
-    }
-    
-    if(typeInt < 0 || typeInt > 2)
-    {
-        return;
-    }
+        std::string name;
+        std::cout << "Input name: ";
+        std::getline(std::cin, name);
 
-    type = static_cast<ParameterType>(typeInt);
-    
-    std::cout << "Input name: ";
-    std::cin >> name;
-
-    targetClass->Add(type, name);
+        targetClass->Add(type, name);
+    }
 }
 
 int main(int argc, char* argv[])

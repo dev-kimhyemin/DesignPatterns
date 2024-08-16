@@ -154,16 +154,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="ClassFile.cpp" />
     <ClCompile Include="EnhancedClass.cpp" />
     <ClCompile Include="CommandPattern.cpp" />
-    <ClCompile Include="ClassCommand.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ClassAttributes.h" />
+    <ClInclude Include="ClassCommand.h" />
     <ClInclude Include="ClassFile.h" />
     <ClInclude Include="EnhancedClass.h" />
-    <ClInclude Include="ClassCommand.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
