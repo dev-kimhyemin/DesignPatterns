@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CommandPattern", "CommandPattern\CommandPattern.vcxproj", "{F736193D-8DFE-44F5-928C-2B92E57C7D8E}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FlyweightPattern", "FlyweightPattern\FlyweightPattern.vcxproj", "{CB74C95C-7098-4FD4-B199-6BE2673BAD35}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{F736193D-8DFE-44F5-928C-2B92E57C7D8E}.Debug|Any CPU.Build.0 = Debug|Win32
 		{F736193D-8DFE-44F5-928C-2B92E57C7D8E}.Release|Any CPU.ActiveCfg = Release|Win32
 		{F736193D-8DFE-44F5-928C-2B92E57C7D8E}.Release|Any CPU.Build.0 = Release|Win32
+		{CB74C95C-7098-4FD4-B199-6BE2673BAD35}.Debug|Any CPU.ActiveCfg = Debug|Win32
+		{CB74C95C-7098-4FD4-B199-6BE2673BAD35}.Debug|Any CPU.Build.0 = Debug|Win32
+		{CB74C95C-7098-4FD4-B199-6BE2673BAD35}.Release|Any CPU.ActiveCfg = Release|Win32
+		{CB74C95C-7098-4FD4-B199-6BE2673BAD35}.Release|Any CPU.Build.0 = Release|Win32
 	EndGlobalSection
 EndGlobal
